@@ -5,9 +5,9 @@ import lounge from "@/assets/garden/garden-lounge.png";
 
 export function StudioSection() {
   return (
-    <section className="relative bg-background py-28 md:py-36">
+    <section className="relative bg-background py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -38,7 +38,7 @@ export function StudioSection() {
               fora do comum.
             </p>
 
-            <div className="mt-10 flex gap-8 border-t border-cream/10 pt-8">
+            <div className="mt-6 flex gap-8 border-t border-cream/10 pt-6">
               <div>
                 <div className="font-display text-3xl text-gradient-gold">Grammy</div>
                 <div className="text-xs uppercase tracking-wider text-cream/55">Latino · Produção</div>

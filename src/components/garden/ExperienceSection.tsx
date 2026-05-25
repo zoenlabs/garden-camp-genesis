@@ -36,7 +36,7 @@ const items = [
 
 export function ExperienceSection() {
   return (
-    <section id="experiencia" className="relative bg-background py-28 md:py-36">
+    <section id="experiencia" className="relative bg-background py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mx-auto flex w-fit items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold/80">
@@ -48,7 +48,7 @@ export function ExperienceSection() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map(({ icon: Icon, title, desc }, i) => (
             <motion.div
               key={title}

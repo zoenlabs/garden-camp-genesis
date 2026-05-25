@@ -13,10 +13,10 @@ const included = [
 
 export function IncludedSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-24 md:py-32">
+    <section className="relative overflow-hidden bg-background py-14 md:py-20">
       <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/30 via-transparent to-transparent" />
       <div className="relative mx-auto max-w-5xl px-6 md:px-12">
-        <div className="mb-12 text-center">
+        <div className="mb-8 text-center">
           <div className="mx-auto flex w-fit items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold/80">
             <span className="h-px w-8 bg-gold/60" />
             Tudo Incluso

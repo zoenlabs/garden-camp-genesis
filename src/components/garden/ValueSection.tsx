@@ -7,7 +7,7 @@ interface Props {
 
 export function ValueSection({ onApply }: Props) {
   return (
-    <section className="relative overflow-hidden py-28 md:py-36">
+    <section className="relative overflow-hidden py-16 md:py-20">
       <div className="absolute inset-0 bg-wood-texture" />
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-90" />
 
@@ -35,7 +35,7 @@ export function ValueSection({ onApply }: Props) {
             <span className="text-gold">R$ 397</span>.
           </p>
 
-          <div className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-border/60 bg-background/40 p-8 backdrop-blur-sm">
               <div className="text-[10px] uppercase tracking-[0.3em] text-cream/55">
                 Valor real estimado
@@ -52,7 +52,7 @@ export function ValueSection({ onApply }: Props) {
             </div>
           </div>
 
-          <p className="mx-auto mt-12 max-w-2xl text-sm italic leading-relaxed text-cream/65 md:text-base">
+          <p className="mx-auto mt-8 max-w-2xl text-sm italic leading-relaxed text-cream/65 md:text-base">
             Você não está comprando uma aula. Você está se candidatando para
             viver um dia de criação musical real dentro do Garden.
           </p>
@@ -60,7 +60,7 @@ export function ValueSection({ onApply }: Props) {
           <Button
             size="lg"
             onClick={onApply}
-            className="mt-10 h-14 w-full max-w-sm rounded-full bg-gradient-to-br from-leaf to-leaf-deep px-8 text-base font-medium text-cream hover:from-leaf hover:to-moss sm:w-auto"
+            className="mt-8 h-14 w-full max-w-sm rounded-full bg-gradient-to-br from-leaf to-leaf-deep px-8 text-base font-medium text-cream hover:from-leaf hover:to-moss sm:w-auto"
           >
             Inscrever-me na seleção oficial
           </Button>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function PurposeSection() {
   return (
-    <section className="relative overflow-hidden py-28 md:py-36">
+    <section className="relative overflow-hidden py-16 md:py-20">
       <video
         autoPlay
         loop

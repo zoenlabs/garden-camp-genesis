@@ -7,7 +7,7 @@ interface Props {
 
 export function FinalCTA({ onApply }: Props) {
   return (
-    <section className="relative overflow-hidden py-32 md:py-44">
+    <section className="relative overflow-hidden py-20 md:py-28">
       <video
         autoPlay
         loop

@@ -18,9 +18,9 @@ const notForYou = [
 
 export function AudienceSection() {
   return (
-    <section className="relative bg-background py-28 md:py-36">
+    <section className="relative bg-background py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="grid gap-4 lg:grid-cols-2 lg:gap-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export function AudienceSection() {
             <h3 className="mt-4 font-display text-3xl leading-tight text-cream md:text-4xl text-balance">
               Essa experiência é <span className="text-gradient-gold italic">para você</span>
             </h3>
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-6 space-y-3">
               {forYou.map((i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold/10">
@@ -55,7 +55,7 @@ export function AudienceSection() {
             <h3 className="mt-4 font-display text-3xl leading-tight text-cream md:text-4xl text-balance">
               Talvez não seja <span className="italic text-cream/70">para você</span>
             </h3>
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-6 space-y-3">
               {notForYou.map((i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-border bg-muted/40">
