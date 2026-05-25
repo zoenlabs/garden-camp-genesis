@@ -39,6 +39,11 @@
   --color-sand: var(--sand);
   --color-olive: var(--olive);
   --color-cream: var(--cream);
+  --color-leaf: var(--leaf);
+  --color-leaf-deep: var(--leaf-deep);
+  --color-leaf-dark: var(--leaf-dark);
+  --color-moss: var(--moss);
+  --color-sage: var(--sage);
 
   --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-script: "Allura", "Great Vibes", cursive;
