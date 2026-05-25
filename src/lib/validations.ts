@@ -15,7 +15,7 @@ export const applicationSchema = z.object({
   }),
   bio: z.string().trim().min(20, "Conte um pouco mais (mín. 20 caracteres)").max(1500),
   instagram: z.string().trim().min(2, "Informe seu @").max(80),
-  link: z.string().trim().url("Informe uma URL válida").max(400),
+  link: z.union([z.literal(""), z.string().trim().url("Informe uma URL válida").max(400)]).optional(),
   availability: z.enum(["sim", "talvez", "nao"], {
     message: "Selecione uma opção",
   }),
