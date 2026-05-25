@@ -65,7 +65,7 @@ export function ApplicationModal({ open, onOpenChange }: Props) {
   const handleNext = async () => {
     const fields: (keyof ApplicationData)[][] = [
       ["fullName", "ageRange", "cityState", "whatsapp", "email"],
-      ["roles", "otherRole", "experience", "bio", "instagram", "link"],
+      ["roles", "otherRole", "experience", "bio", "instagram"],
       ["availability", "hasDietary", "dietaryDetails", "investment", "why"],
     ];
     const ok = await trigger(fields[step], { shouldFocus: true });
