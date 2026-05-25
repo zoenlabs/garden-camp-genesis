@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { PenLine, Sparkles, Mic, Music2, Film, Disc3 } from "lucide-react";
+import { Logo } from "./Logo";
 
 const items = [
   {
