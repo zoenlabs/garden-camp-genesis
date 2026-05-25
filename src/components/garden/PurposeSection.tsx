@@ -2,9 +2,19 @@ import { motion } from "framer-motion";
 
 export function PurposeSection() {
   return (
-    <section className="relative overflow-hidden bg-wood-texture py-28 md:py-36">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-80" />
+    <section className="relative overflow-hidden py-28 md:py-36">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/videos/purpose-bg.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background" />
       <div className="absolute inset-0 vignette" />
+
 
       <div className="relative mx-auto max-w-5xl px-6 text-center md:px-12">
         <motion.div
