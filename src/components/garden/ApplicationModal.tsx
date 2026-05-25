@@ -369,9 +369,11 @@ export function ApplicationModal({ open, onOpenChange }: Props) {
                 </motion.div>
               )}
             </AnimatePresence>
+            </div>
 
             {/* Footer actions */}
-            <div className="mt-10 flex flex-col-reverse items-stretch justify-between gap-3 border-t border-border/60 pt-6 sm:flex-row sm:items-center">
+            <div className="flex shrink-0 flex-col-reverse items-stretch justify-between gap-3 border-t border-border/60 bg-background/80 px-5 py-4 backdrop-blur sm:flex-row sm:items-center md:px-10 md:py-5">
+
               <Button
                 type="button"
                 variant="ghost"
