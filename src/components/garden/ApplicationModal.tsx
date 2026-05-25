@@ -88,17 +88,9 @@ export function ApplicationModal({ open, onOpenChange }: Props) {
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent
           className="max-h-[92svh] max-w-3xl gap-0 overflow-hidden border-gold/20 bg-gradient-to-b from-card to-background p-0"
-          showCloseButton={false}
         >
           {/* Header */}
           <div className="relative border-b border-border/60 bg-background/60 px-6 py-6 backdrop-blur md:px-10">
-            <button
-              onClick={() => onOpenChange(false)}
-              aria-label="Fechar"
-              className="absolute right-5 top-5 rounded-full p-2 text-cream/60 transition-colors hover:bg-muted hover:text-cream"
-            >
-              <X className="h-4 w-4" />
-            </button>
             <div className="text-[10px] uppercase tracking-[0.4em] text-gold">
               Seleção Oficial
             </div>
