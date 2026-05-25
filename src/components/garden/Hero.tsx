@@ -63,7 +63,7 @@ export function Hero({ onApply }: HeroProps) {
             2026
           </span>
           <h1 className="sr-only">Garden Camp</h1>
-          <Logo className="mt-3 h-[30rem] w-auto sm:h-[42rem] md:h-[54rem] lg:h-[60rem]" />
+          <Logo className="mt-3 h-40 w-auto sm:h-56 md:h-72 lg:h-80" />
           <div className="mt-3 flex items-center gap-3">
             <span className="h-px w-8 bg-gold/60 sm:w-12" />
             <span className="font-display text-[10px] uppercase tracking-[0.4em] text-gold sm:text-xs">
