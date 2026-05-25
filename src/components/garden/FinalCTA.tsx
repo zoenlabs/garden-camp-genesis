@@ -34,10 +34,7 @@ export function FinalCTA({ onApply }: Props) {
             <span className="h-px w-8 bg-gold/60" />
           </div>
 
-          <h2 className="mt-8 font-display text-4xl leading-[0.95] text-cream text-balance sm:text-5xl md:text-7xl lg:text-8xl">
-            Pronto para viver o
-          </h2>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <Logo className="h-32 w-auto sm:h-40 md:h-52" />
           </div>
 
