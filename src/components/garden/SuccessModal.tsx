@@ -11,7 +11,7 @@ interface Props {
 export function SuccessModal({ open, onOpenChange }: Props) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-md border-gold/30 bg-gradient-to-b from-card to-background p-10 text-center">
+      <DialogContent className="w-[calc(100%-1.5rem)] max-w-md border-gold/30 bg-gradient-to-b from-card to-background p-6 text-center sm:p-10">
         <motion.div
           initial={{ scale: 0.7, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
