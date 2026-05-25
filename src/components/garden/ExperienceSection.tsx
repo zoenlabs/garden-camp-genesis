@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { PenLine, Sparkles, Mic, Music2, Film, Disc3 } from "lucide-react";
+import { Logo } from "./Logo";
 
 const items = [
   {
@@ -44,7 +45,7 @@ export function ExperienceSection() {
             A Experiência
           </div>
           <h2 className="mt-6 font-display text-4xl leading-[1.05] text-cream text-balance md:text-5xl lg:text-6xl">
-            O que acontece no <span className="text-gradient-gold italic">Garden Camp</span>
+            O que acontece no <Logo className="inline-block h-[1em] w-auto align-middle" />
           </h2>
         </div>
 
