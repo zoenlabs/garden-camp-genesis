@@ -3,14 +3,14 @@ import { Users } from "lucide-react";
 
 export function ScarcitySection() {
   return (
-    <section className="relative bg-background py-24 md:py-32">
+    <section className="relative bg-background py-14 md:py-20">
       <div className="mx-auto max-w-4xl px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden rounded-3xl border border-gold/25 bg-card/60 p-10 text-center backdrop-blur-sm md:p-16"
+          className="relative overflow-hidden rounded-3xl border border-gold/25 bg-card/60 p-8 text-center backdrop-blur-sm md:p-12"
         >
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-gold/5 via-transparent to-amber-glow/5" />
 
