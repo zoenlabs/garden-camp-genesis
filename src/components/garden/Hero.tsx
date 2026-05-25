@@ -43,8 +43,8 @@ export function Hero({ onApply }: HeroProps) {
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh-88px)] w-full max-w-3xl flex-col items-center justify-center px-5 pb-28 pt-6 text-center sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeOut" }}
           className="flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold/85"
         >
           <span className="h-px w-8 bg-gold/60" />
@@ -55,8 +55,8 @@ export function Hero({ onApply }: HeroProps) {
         {/* Folder-inspired wordmark */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
           className="mt-5 flex flex-col items-center"
         >
           <span className="font-display text-xs uppercase tracking-[0.5em] text-cream/65 sm:text-sm">
@@ -76,8 +76,8 @@ export function Hero({ onApply }: HeroProps) {
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.9, delay: 0.35 }}
           className="mt-8 max-w-xl text-base leading-relaxed text-cream/85 text-balance sm:text-lg md:text-xl"
         >
           Um dia inteiro de imersão criativa no <span className="text-sage">Garden Studio</span> para artistas, compositores, cantores e criativos da música cristã.
@@ -85,8 +85,8 @@ export function Hero({ onApply }: HeroProps) {
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.9, delay: 0.5 }}
           className="mt-4 max-w-lg text-sm leading-relaxed text-cream/65 sm:text-base"
         >
           6 de Junho · Vinhedo · Interior de SP — composição, gravação, conexão e criação musical ao lado da equipe Garden.
@@ -95,8 +95,8 @@ export function Hero({ onApply }: HeroProps) {
         {/* Highlight chips */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.65 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.9, delay: 0.65 }}
           className="mt-8 flex flex-wrap justify-center gap-2 sm:gap-3"
         >
           {[
@@ -117,8 +117,8 @@ export function Hero({ onApply }: HeroProps) {
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.9, delay: 0.8 }}
           className="mt-10 flex w-full max-w-md flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
           <Button
