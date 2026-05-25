@@ -73,16 +73,80 @@ export function ApplicationModal({ open, onOpenChange }: Props) {
     if (ok) setStep((s) => Math.min(s + 1, steps.length - 1));
   };
 
-  const onSubmit = async (_data: ApplicationData) => {
-    setSubmitting(true);
-    // Simulated submission
-    await new Promise((r) => setTimeout(r, 1100));
-    setSubmitting(false);
-    setSuccess(true);
-    onOpenChange(false);
-    reset();
-    setStep(0);
-  };
+  const ageRangeMap: Record<string, string> = {
+    "18-24": "18 a 24",
+    "25-30": "25 a 30",
+    "31-40": "31 a 40",
+    "40+": "40+",
+  }
+
+  const experienceMap: Record<string, string> = {
+    "iniciando": "Estou começando",
+    "1-3": "1 a 3 anos",
+    "4-7": "4 a 7 anos",
+    "8+": "8 anos ou mais",
+  }
+
+  const availabilityMap: Record<string, string> = {
+    "sim": "Sim, tenho disponibilidade total",
+    "talvez": "Talvez / preciso me organizar",
+    "nao": "Não",
+  }
+
+  const investmentMap: Record<string, string> = {
+    "sim": "Sim, estou pronto para investir R$ 397 caso seja selecionado(a)",
+    "info": "Tenho interesse, mas preciso de mais informações",
+    "nao": "Não estou pronto neste momento",
+  }
+
+  const onSubmit = async (data: ApplicationData) => {
+    setSubmitting(true)
+    try {
+      const payload = {
+        full_name: data.fullName,
+        age_range: ageRangeMap[data.ageRange],
+        city_state: data.cityState,
+        whatsapp: data.whatsapp,
+        email: data.email,
+        music_roles: data.roles,
+        music_role_other: data.otherRole ?? null,
+        music_experience: experienceMap[data.experience],
+        music_bio: data.bio,
+        instagram: data.instagram,
+        portfolio_url: data.link,
+        availability: availabilityMap[data.availability],
+        has_food_restriction: data.hasDietary === "sim",
+        food_restriction_details: data.dietaryDetails ?? null,
+        investment_readiness: investmentMap[data.investment],
+        selection_reason: data.why,
+      }
+
+      const res = await fetch("/api/applications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+
+      if (res.status === 409) {
+        alert("Já existe uma inscrição com este e-mail ou WhatsApp.")
+        return
+      }
+
+      if (!res.ok) {
+        alert("Erro ao enviar inscrição. Verifique os campos e tente novamente.")
+        return
+      }
+
+      setSuccess(true)
+      onOpenChange(false)
+      reset()
+      setStep(0)
+    } catch {
+      alert("Erro de conexão. Tente novamente.")
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   return (
     <>

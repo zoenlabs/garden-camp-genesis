@@ -1,0 +1,56 @@
+networks:
+  sites:
+    external: true
+
+volumes:
+  postgres_data:
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gardencamp.rule=Host(`gardencamp.zoenlabs.com.br`)"
+      - "traefik.http.routers.gardencamp.entrypoints=websecure"
+      - "traefik.http.routers.gardencamp.tls.certresolver=letsencrypt"
+      - "traefik.http.services.gardencamp.loadbalancer.server.port=3000"
+    networks:
+      - sites
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - PORT=3001
+    depends_on:
+      - postgres
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gardencamp-api.rule=Host(`gardencamp.zoenlabs.com.br`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.gardencamp-api.entrypoints=websecure"
+      - "traefik.http.routers.gardencamp-api.tls.certresolver=letsencrypt"
+      - "traefik.http.services.gardencamp-api.loadbalancer.server.port=3001"
+    networks:
+      - sites
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=gardencamp
+      - POSTGRES_USER=gardencamp
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - sites

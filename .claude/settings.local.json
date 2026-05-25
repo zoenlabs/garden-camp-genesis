@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun install *)",
+      "PowerShell(Get-Command bun -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command npm -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell(where.exe bun 2>&1; $env:PATH -split ';' | Where-Object { $_ -match 'bun' })",
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\.bun\\\\bin\\\\bun.exe\"; Test-Path \"C:\\\\Users\\\\Sentinela\\\\.bun\\\\bin\\\\bun.exe\")",
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\" -Directory | Select-Object Name)",
+      "PowerShell($env:USERPROFILE)",
+      "PowerShell($env:USERNAME)",
+      "PowerShell(cd \"d:\\\\Projetos\\\\garden-camp-genesis\"; $proc = Start-Process -FilePath \"node\" -ArgumentList \"start-server.mjs\" -PassThru -RedirectStandardOutput \"server-test.log\" -RedirectStandardError \"server-test-err.log\"; Start-Sleep -Seconds 3; $proc.HasExited; Get-Content \"server-test.log\" -ErrorAction SilentlyContinue; Get-Content \"server-test-err.log\" -ErrorAction SilentlyContinue; if \\(-not $proc.HasExited\\) { $proc.Kill\\(\\) }; Remove-Item \"server-test.log\",\"server-test-err.log\" -ErrorAction SilentlyContinue)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}
