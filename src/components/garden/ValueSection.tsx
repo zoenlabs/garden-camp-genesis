@@ -60,7 +60,7 @@ export function ValueSection({ onApply }: Props) {
           <Button
             size="lg"
             onClick={onApply}
-            className="mt-10 h-14 rounded-full bg-gradient-to-br from-gold to-amber-glow px-8 text-base font-medium text-background hover:from-gold-soft hover:to-gold"
+            className="mt-10 h-14 w-full max-w-sm rounded-full bg-gradient-to-br from-leaf to-leaf-deep px-8 text-base font-medium text-cream hover:from-leaf hover:to-moss sm:w-auto"
           >
             Inscrever-me na seleção oficial
           </Button>
