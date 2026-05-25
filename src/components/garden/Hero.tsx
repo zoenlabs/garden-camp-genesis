@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Calendar, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/garden/Logo";
 
 interface HeroProps {
   onApply: () => void;
@@ -26,9 +27,8 @@ export function Hero({ onApply }: HeroProps) {
 
       {/* Top bar */}
       <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 sm:px-8 md:px-12 md:py-6">
-        <div className="flex items-center gap-2 text-sm tracking-wide text-cream/90 sm:text-base">
-          <span className="font-script text-2xl leading-none text-gradient-leaf sm:text-3xl">Garden</span>
-          <span className="font-display text-xs uppercase tracking-[0.3em] text-cream/70 sm:text-sm">Camp</span>
+        <div className="flex items-center">
+          <Logo className="h-10 w-auto sm:h-12" />
         </div>
         <div className="hidden items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-cream/60 sm:flex">
           <span className="h-px w-6 bg-gold/50" />
@@ -62,13 +62,12 @@ export function Hero({ onApply }: HeroProps) {
           <span className="font-display text-xs uppercase tracking-[0.5em] text-cream/65 sm:text-sm">
             2026
           </span>
-          <h1 className="mt-2 font-script text-[3.75rem] leading-[0.85] text-gradient-leaf sm:text-[5.5rem] md:text-[7rem] lg:text-[8.5rem]">
-            Garden
-          </h1>
-          <div className="mt-1 flex items-baseline gap-3">
+          <h1 className="sr-only">Garden Camp</h1>
+          <Logo className="mt-3 h-40 w-auto sm:h-56 md:h-72 lg:h-80" />
+          <div className="mt-3 flex items-center gap-3">
             <span className="h-px w-8 bg-gold/60 sm:w-12" />
-            <span className="font-display text-3xl font-bold uppercase tracking-[0.18em] text-gradient-gold sm:text-5xl md:text-6xl">
-              Camp
+            <span className="font-display text-[10px] uppercase tracking-[0.4em] text-gold sm:text-xs">
+              Edição 2026
             </span>
             <span className="h-px w-8 bg-gold/60 sm:w-12" />
           </div>

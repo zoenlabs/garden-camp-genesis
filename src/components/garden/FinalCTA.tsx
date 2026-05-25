@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/garden/Logo";
 
 interface Props {
   onApply: () => void;
@@ -34,9 +35,11 @@ export function FinalCTA({ onApply }: Props) {
           </div>
 
           <h2 className="mt-8 font-display text-4xl leading-[0.95] text-cream text-balance sm:text-5xl md:text-7xl lg:text-8xl">
-            Pronto para viver o{" "}
-            <span className="font-script text-gradient-leaf text-5xl sm:text-6xl md:text-8xl lg:text-9xl">Garden Camp?</span>
+            Pronto para viver o
           </h2>
+          <div className="mt-6 flex justify-center">
+            <Logo className="h-32 w-auto sm:h-40 md:h-52" />
+          </div>
 
           <p className="mx-auto mt-8 max-w-xl text-base text-cream/80 md:text-lg">
             Preencha sua inscrição com atenção. Se o seu perfil for
@@ -55,9 +58,8 @@ export function FinalCTA({ onApply }: Props) {
 
       <footer className="relative mt-24 border-t border-cream/10 pt-10 text-center text-xs text-cream/45">
         <div className="mx-auto max-w-4xl px-6">
-          <div>
-            <span className="font-script text-3xl text-gradient-leaf">Garden</span>{" "}
-            <span className="font-display text-sm uppercase tracking-[0.3em] text-cream/70">Camp</span>
+          <div className="flex justify-center">
+            <Logo className="h-12 w-auto" />
           </div>
           <div className="mt-2 text-[10px] uppercase tracking-[0.3em]">
             Garden Studio · Vinhedo · São Paulo
