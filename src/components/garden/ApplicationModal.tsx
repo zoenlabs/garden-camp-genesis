@@ -95,10 +95,12 @@ export function ApplicationModal({ open, onOpenChange }: Props) {
             <div className="text-[10px] uppercase tracking-[0.4em] text-gold">
               Seleção Oficial
             </div>
-            <DialogTitle className="mt-2 font-display text-3xl text-cream md:text-4xl">
-              Garden Camp <span className="text-cream/40">|</span>{" "}
-              <span className="text-gradient-gold italic">Seleção Oficial</span>
-            </DialogTitle>
+            <div className="mt-2 flex items-center gap-4">
+              <Logo className="h-14 w-auto md:h-16" />
+              <DialogTitle className="font-display text-2xl text-gradient-gold italic md:text-3xl">
+                Seleção Oficial
+              </DialogTitle>
+            </div>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cream/65">
               Uma experiência exclusiva e imersiva no Garden para compositores,
               artistas, cantores e criativos da música. No dia 6 de Junho, você
