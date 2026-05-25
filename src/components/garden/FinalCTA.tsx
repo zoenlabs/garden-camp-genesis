@@ -33,9 +33,9 @@ export function FinalCTA({ onApply }: Props) {
             <span className="h-px w-8 bg-gold/60" />
           </div>
 
-          <h2 className="mt-8 font-display text-5xl leading-[0.95] text-cream text-balance md:text-7xl lg:text-8xl">
+          <h2 className="mt-8 font-display text-4xl leading-[0.95] text-cream text-balance sm:text-5xl md:text-7xl lg:text-8xl">
             Pronto para viver o{" "}
-            <span className="text-gradient-gold italic">Garden Camp?</span>
+            <span className="font-script text-gradient-leaf text-5xl sm:text-6xl md:text-8xl lg:text-9xl">Garden Camp?</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-xl text-base text-cream/80 md:text-lg">
@@ -46,7 +46,7 @@ export function FinalCTA({ onApply }: Props) {
           <Button
             size="lg"
             onClick={onApply}
-            className="mt-12 h-16 rounded-full bg-gradient-to-br from-gold to-amber-glow px-10 text-base font-medium text-background shadow-[0_30px_80px_-20px_var(--amber-glow)] transition-transform hover:scale-[1.02] hover:from-gold-soft hover:to-gold"
+            className="mt-12 h-16 w-full max-w-sm rounded-full bg-gradient-to-br from-leaf to-leaf-deep px-8 text-base font-medium text-cream shadow-[0_30px_80px_-20px_var(--leaf)] transition-transform hover:scale-[1.02] hover:from-leaf hover:to-moss sm:w-auto sm:px-10"
           >
             Quero participar da seleção oficial
           </Button>
@@ -55,8 +55,9 @@ export function FinalCTA({ onApply }: Props) {
 
       <footer className="relative mt-24 border-t border-cream/10 pt-10 text-center text-xs text-cream/45">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="font-display text-lg text-cream/70">
-            <span className="text-gradient-gold">Garden</span> Camp
+          <div>
+            <span className="font-script text-3xl text-gradient-leaf">Garden</span>{" "}
+            <span className="font-display text-sm uppercase tracking-[0.3em] text-cream/70">Camp</span>
           </div>
           <div className="mt-2 text-[10px] uppercase tracking-[0.3em]">
             Garden Studio · Vinhedo · São Paulo
