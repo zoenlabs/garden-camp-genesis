@@ -87,10 +87,11 @@ export function ApplicationModal({ open, onOpenChange }: Props) {
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent
-          className="max-h-[92svh] max-w-3xl gap-0 overflow-hidden border-gold/20 bg-gradient-to-b from-card to-background p-0"
+          className="flex max-h-[92svh] w-[calc(100%-1.5rem)] max-w-3xl flex-col gap-0 overflow-hidden border-gold/20 bg-gradient-to-b from-card to-background p-0 sm:w-[calc(100%-2rem)]"
         >
           {/* Header */}
-          <div className="relative border-b border-border/60 bg-background/60 px-6 py-6 backdrop-blur md:px-10">
+          <div className="relative shrink-0 border-b border-border/60 bg-background/60 px-5 py-5 backdrop-blur md:px-10 md:py-6">
+
             <div className="text-[10px] uppercase tracking-[0.4em] text-gold">
               Seleção Oficial
             </div>
